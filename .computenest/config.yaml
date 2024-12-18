@@ -115,7 +115,7 @@ ImageBuilder:
   EcsImage:
     RegionId: cn-hangzhou
     SourceImageId: m-bp13n2l49y622exdbpop
-    SystemDiskSize: 40
+    SystemDiskSize: 100
     InstanceType: ecs.c6.large
     InternetMaxBandwidthOut: 10
     CommandType: RunShellScript
