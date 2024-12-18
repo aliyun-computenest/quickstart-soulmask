@@ -6,7 +6,7 @@ Service:
       Prefix: soulmask-
     SupplierDeployMetadata:
       ArtifactRelation:
-        'centos_7':
+        'm-bp1bx1br89nv53czvt7p':
           ArtifactId: ${Artifact.EcsImage.ArtifactId}
           ArtifactVersion: ${Artifact.EcsImage.ArtifactVersion}
     TemplateConfigs:
