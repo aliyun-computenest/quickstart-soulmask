@@ -61,38 +61,6 @@ Conditions:
     Fn::Equals:
       - Ref: CreateImage
       - Create
-Mappings:
-  ImageId:
-    Windows:
-      "cn-beijing": "m-2ze39r2413xa54zg2xul"
-      "cn-wulanchabu": "m-0jlfk48byg1b0414evct"
-      "ap-south-1": "m-a2dg448htylco5ez9iou"
-      "cn-qingdao": "m-m5e8xah8ey8sntgpmn8u"
-      "cn-wuhan-lr": "m-n4a2wqfph9wrbx7cvbi5"
-      "cn-shanghai": "m-uf65r75uyuvvvl2cfvpm"
-      "cn-hongkong": "m-j6c24nxbg87seh6rs6q2"
-      "cn-heyuan": "m-f8ziz4vp9asixphrc9p7"
-      "eu-central-1": "m-gw8glmtb2c30zhriuwqa"
-      "cn-zhangjiakou": "m-8vb7kug1egjaj7nzulam"
-      "us-west-1": "m-rj9hdugmj9et1hkzonak"
-      "cn-shenzhen": "m-wz9cd59cuyl4eu9r8aye"
-      "cn-nanjing": "m-gc70l3ka3qo5d8bj5cx4"
-      "eu-west-1": "m-d7o7mm20jzwluycveqch"
-      "ap-northeast-2": "m-mj79ldcwo90lt4g9wkij"
-      "ap-northeast-1": "m-6wed4d0dym6htvk26wyl"
-      "cn-fuzhou": "m-gw0847wey9cgx56i4exs"
-      "me-east-1": "m-eb3fdng0be0auzbjv8bz"
-      "cn-chengdu": "m-2vcaunrzll6nmlltdp7a"
-      "cn-guangzhou": "m-7xv1rzbkrw97avbkdph7"
-      "ap-southeast-1": "m-t4ncba1vu7qxmr6ki1ft"
-      "ap-southeast-2": "m-p0wa1g0mg9a11l6bu8n5"
-      "ap-southeast-3": "m-8ps5etu2f9jztpym6bkg"
-      "cn-huhehaote": "m-hp3cllh5n0fhosbkebr2"
-      "ap-southeast-5": "m-k1aeeh9wx466xnubaxwz"
-      "us-east-1": "m-0xi87b01svz28qmchu3j"
-      "ap-southeast-6": "m-5tsities2qmhj6ii4cyx"
-      "ap-southeast-7": "m-0jo5vbh76pl8tr6znl64"
-      "cn-hangzhou": "m-bp1bacn22h9m15f1ymnj"
 Resources:
   InstanceDataSource:
     Type: DATASOURCE::ECS::Instances
@@ -164,11 +132,7 @@ Resources:
           Ref: ALIYUN::Region
         instanceId:
           Ref: InstanceId
-        imageId:
-          Fn::FindInMap:
-            - ImageId
-            - Windows
-            - Ref: ALIYUN::Region
+        imageId: m-bp1bx1br89nv53czvt7p
         password:
           Ref: InstancePassword
   SleepBeforeRunCommand:
