@@ -32,7 +32,7 @@ ImageBuilder:
     RegionId: cn-hangzhou
     SourceImageId: m-bp13n2l49y622exdbpop
     SystemDiskSize: 100
-    InstanceType: ecs.c6.large
+    InstanceType: ecs.g7.large
     InternetMaxBandwidthOut: 10
     CommandType: RunPowerShellScript
     Timeout: 10800
