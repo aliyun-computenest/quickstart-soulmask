@@ -1,0 +1,43 @@
+Service:
+  RegionId: cn-hangzhou
+  DeployType: ros
+  DeployMetadata:
+    ServiceInstanceNameRule:
+      Prefix: soulmask-
+    SupplierDeployMetadata:
+      ArtifactRelation:
+        'm-bp1bx1br89nv53czvt7p':
+          ArtifactId: ${Artifact.EcsImage.ArtifactId}
+          ArtifactVersion: ${Artifact.EcsImage.ArtifactVersion}
+    TemplateConfigs:
+      - Name: 快速部署
+        Url: 'ros_templates/soulmask.yaml'
+      - Name: 迁移到计算巢
+        Url: 'ros_templates/soulmask-ecs.yaml'
+  ServiceType: private
+  ServiceInfo:
+    Locale: zh-CN
+    ShortDescription: docker deploy
+    Image: 'resources/icons/service_logo.jpg'
+Artifact:
+  EcsImage:
+    ArtifactType: EcsImage
+    ArtifactName: SoulMask
+    Description: Soulmask deploy
+    ArtifactProperty:
+      RegionId: ${ImageBuilder.EcsImage.RegionId}
+      ImageId: ${ImageBuilder.EcsImage.SourceImageId}
+ImageBuilder:
+  EcsImage:
+    RegionId: cn-hangzhou
+    SourceImageId: m-bp13n2l49y622exdbpop
+    SystemDiskSize: 100
+    InstanceType: ecs.c6.large
+    InternetMaxBandwidthOut: 10
+    CommandType: RunShellScript
+    Timeout: 10800
+    CommandContent: |-
+        # 更新并启动游戏
+        $TaskName = "SoulMaskServerAutoStart"
+        Start-ScheduledTask -TaskName $TaskName
+        Start-Sleep -Seconds 180
