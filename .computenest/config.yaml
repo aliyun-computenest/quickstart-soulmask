@@ -17,13 +17,13 @@ Service:
   ServiceType: private
   ServiceInfo:
     - Agreements: []
-      Image: resources/icons/service_logo_zh-CN.png
+      Image: resources/icons/service_logo.jpg
       Locale: zh-CN
       Name: 灵魂面甲 - 快速部署
       ShortDescription: 灵魂面甲《Soulmask》是一款主打真实体验的生存沙盒游戏。作为拥有神秘面甲加持的部落“最后一人”，玩家将在一片充满神秘崇拜的原始大陆艰难求生并开辟自己的崛起之路。从零开始探索、建造，招募族人壮大自己的氏族部落，最终探寻和揭示蕴藏在这个世界背后文明的神秘真相
       Softwares: []
     - Agreements: []
-      Image: resources/icons/service_logo_en-US.png
+      Image: resources/icons/service_logo.jpg
       Locale: en-US
       Name: SoulMask-Rapid Deployment
       ShortDescription: SoulMask is a main real experience of survival sandbox game. As the "last man" of the tribe with the blessing of the mysterious face armor, players will struggle
